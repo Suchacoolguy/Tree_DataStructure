@@ -1,22 +1,23 @@
 public class test {
     public static void main(String[] args) 
     {
-        int num = 51;   // 51을 넣었을 때 과제 예시처럼 "AZ"가 나오는지 확인한 것.
+        int num = 53;   // 51을 넣었을 때 과제 예시처럼 "AZ"가 나오는지 확인한 것.
         System.out.println(decimalToAlphabetBase(num));
     }
 
     public static String decimalToAlphabetBase(int num)
     {
         String res = "";
-        int i = 0;
-
+        int ch;
         do
         {
-            int ch = num % 26 + 'A' - i;
+            ch = num % 26 + 'A';  
             num /= 26;
-            res += (char) ch;
-            i++;
-        }
+            if (num == 0)
+                res += (char) (ch - 1);
+            else
+                res += (char) ch;
+        }   
         while(num > 0);
 
         return (reverseString(res));

@@ -2,7 +2,7 @@
 // 이렇게 하면 Print 하나로 문제 1번부터 3번까지 트리로 출력 가능.
 //  (Traverse 하면서 만든 String을 받아서 그걸 사용하는 Print 함수를 만드는 것)
 
-public class CBT_array extends SuperTree {
+public class CBT_array extends SuperTree {  // 여기 SuperTree 에다가 print 함수 만들어 둘 예정~
     Object[] arr;
     int size;
     
